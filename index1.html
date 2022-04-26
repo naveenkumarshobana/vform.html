@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course</title>
+<style>
+     
+        .d{
+            margin-top: 5%;
+            margin-left: 20%;
+            margin-right: 20%;
+            
+        }
+    body{
+        background-color: plum;
+    }
+</style>
+</head>
+
+<body>
+
+<script>
+function validateForm() {
+let x = document.forms["myForm"]["Name:"].value;
+if (x == "") {
+alert("Name must be filled out");
+return false;
+}
+let y = document.forms["myForm"]["num"].value;
+var num=document.myForm.num.value;
+if (num.length!=10){
+alert("Enter Valid number");
+return false;
+}
+else{
+return true;
+}
+}
+</script>
+</head>
+<body>
+    <div class="d"><fieldset style="border-radius: 30px;background-color: pink;">
+<h2 style="text-align: center;"> COURSE REGISTRATION FORM</h2>
+<form name="myForm" action="sumbit.html" onsubmit="return validateForm()">
+Name : <input type="text" name="Name:"><br>
+<br>
+E-Mail-ID : <input type="email" name="Mail:">
+<br><br>
+Phone Number: <input type="text" name="num">
+<br><br><br>
+Year of Studying :<br> <input type="radio" value="II" name="year">II Year<br><input type="radio" value="III" name="year">III Year<br><input type="radio" value="IV" name="year">IV Year
+<br><br>
+<label>Courses Selected:</label>
+<select name="course">
+    <option value=""></option>
+    <option value="deptname">Information Technology</option>
+    <option value="deptname">Computer Science</option>
+    <option value="deptname">Civil Engineering</option>
+    <option value="deptname">Mechnical Engineering</option>
+    <option value="deptname">Automobile Engineering</option>
+    <option value="deptname">Electrical and Communication Engineering</option>
+    <option value="deptname">Electrical and Instructment Engineering</option>
+    <option value="deptname">Electrical and Electronical Engineering</option>
+</select>
+<br>
+<br>
+<label>COURSES :</label><br><BR>
+<input type="checkbox" name="HTML" value="html" >
+<label>Full Stack Development</label><br>
+<input type="checkbox" name="JS" value="js">
+<label>Android Development </label><br>
+<input type="checkbox" name="BOOTSTRAP" value="bootstrap">
+<label>UI/UX Designer</label><br><br><br>
+<input type="submit" value="Submit">
+</form>
+</fieldset>
+</div>
+
+</body>
+</html>
